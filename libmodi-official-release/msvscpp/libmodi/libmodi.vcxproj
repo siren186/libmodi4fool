@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="VSDebug|Win32">
+      <Configuration>VSDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{1660EB10-5241-431C-B3A2-607341435A83}</ProjectGuid>
+    <RootNamespace>libmodi</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VSDebug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='VSDebug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.32505.173</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='VSDebug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\include;..\..\common;..\..\libcerror;..\..\libcthreads;..\..\libcdata;..\..\libclocale;..\..\libcnotify;..\..\libcsplit;..\..\libuna;..\..\libcdirectory;..\..\libcfile;..\..\libcpath;..\..\libbfio;..\..\libfcache;..\..\libfdata;..\..\libfguid;..\..\libfvalue;..\..\libfplist;..\..\libhmac;..\..\libcaes;..\..\..\bzip2;..\..\..\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;HAVE_LOCAL_LIBCERROR;HAVE_LOCAL_LIBCTHREADS;HAVE_LOCAL_LIBCDATA;HAVE_LOCAL_LIBCLOCALE;HAVE_LOCAL_LIBCNOTIFY;HAVE_LOCAL_LIBCSPLIT;HAVE_LOCAL_LIBUNA;HAVE_LOCAL_LIBCDIRECTORY;HAVE_LOCAL_LIBCFILE;HAVE_LOCAL_LIBCPATH;HAVE_LOCAL_LIBBFIO;HAVE_LOCAL_LIBFCACHE;HAVE_LOCAL_LIBFDATA;HAVE_LOCAL_LIBFGUID;HAVE_LOCAL_LIBFVALUE;HAVE_LOCAL_LIBFPLIST;HAVE_LOCAL_LIBHMAC;HAVE_LOCAL_LIBCAES;BZ_DLL;ZLIB_DLL;LIBMODI_DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImportLibrary>$(OutDir)$(ProjectName).lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='VSDebug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;..\..\common;..\..\libcerror;..\..\libcthreads;..\..\libcdata;..\..\libclocale;..\..\libcnotify;..\..\libcsplit;..\..\libuna;..\..\libcdirectory;..\..\libcfile;..\..\libcpath;..\..\libbfio;..\..\libfcache;..\..\libfdata;..\..\libfguid;..\..\libfvalue;..\..\libfplist;..\..\libhmac;..\..\libcaes;..\..\..\bzip2;..\..\..\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;HAVE_LOCAL_LIBCERROR;HAVE_LOCAL_LIBCTHREADS;HAVE_LOCAL_LIBCDATA;HAVE_LOCAL_LIBCLOCALE;HAVE_LOCAL_LIBCNOTIFY;HAVE_LOCAL_LIBCSPLIT;HAVE_LOCAL_LIBUNA;HAVE_LOCAL_LIBCDIRECTORY;HAVE_LOCAL_LIBCFILE;HAVE_LOCAL_LIBCPATH;HAVE_LOCAL_LIBBFIO;HAVE_LOCAL_LIBFCACHE;HAVE_LOCAL_LIBFDATA;HAVE_LOCAL_LIBFGUID;HAVE_LOCAL_LIBFVALUE;HAVE_LOCAL_LIBFPLIST;HAVE_LOCAL_LIBHMAC;HAVE_LOCAL_LIBCAES;BZ_DLL;ZLIB_DLL;LIBMODI_DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>false</DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImportLibrary>$(OutDir)$(ProjectName).lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\libmodi\libmodi.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_adc.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_bands_data_handle.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_block_chunks_data_handle.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_compression.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_data_block.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_debug.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_deflate.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_error.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_handle.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_i18n.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_io_handle.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_notify.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_sparse_bundle_xml_plist.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_sparse_image_header.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_support.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_system_string.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_udif_block_table.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_udif_block_table_entry.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_udif_resource_file.c" />
+    <ClCompile Include="..\..\libmodi\libmodi_udif_xml_plist.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\libmodi\libmodi_adc.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_bands_data_handle.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_block_chunks_data_handle.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_codepage.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_compression.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_data_block.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_debug.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_definitions.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_deflate.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_error.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_extern.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_handle.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_i18n.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_io_handle.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_libbfio.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_libcdata.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_libcdirectory.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_libcerror.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_libcfile.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_libclocale.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_libcnotify.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_libcpath.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_libcthreads.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_libfcache.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_libfdata.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_libfplist.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_libfvalue.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_libuna.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_notify.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_sparse_bundle_xml_plist.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_sparse_image_header.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_support.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_system_string.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_types.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_udif_block_table.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_udif_block_table_entry.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_udif_resource_file.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_udif_xml_plist.h" />
+    <ClInclude Include="..\..\libmodi\libmodi_unused.h" />
+    <ClInclude Include="..\..\libmodi\modi_sparse_image_header.h" />
+    <ClInclude Include="..\..\libmodi\modi_udif_block_table.h" />
+    <ClInclude Include="..\..\libmodi\modi_udif_resource_file.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\libmodi\libmodi.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bzip2\bzip2.vcxproj">
+      <Project>{57a7a174-4e0d-4551-af67-c3a08288e4b8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libbfio\libbfio.vcxproj">
+      <Project>{4b3b6824-5c4c-45a1-aaa2-fdd030f42397}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libcaes\libcaes.vcxproj">
+      <Project>{68d72847-369a-4618-92a6-e7c4853dff84}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libcdata\libcdata.vcxproj">
+      <Project>{1eef3b33-c81c-49aa-9c4a-7e42def30d6e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libcdirectory\libcdirectory.vcxproj">
+      <Project>{e74b2abd-6e9f-4ed1-ad2f-45ddcf718a41}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libcerror\libcerror.vcxproj">
+      <Project>{53af92ff-83e9-4842-9ba8-8ec24e40f556}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libcfile\libcfile.vcxproj">
+      <Project>{7f4ef714-677f-4208-8469-e81610e04323}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libclocale\libclocale.vcxproj">
+      <Project>{5e2d14c8-1469-4cd1-93b7-1ed596fcd2f9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libcnotify\libcnotify.vcxproj">
+      <Project>{1d64364e-e88b-443e-88e0-5595fcb697da}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libcpath\libcpath.vcxproj">
+      <Project>{b6c825bf-b923-407e-9c17-40c4a8933cd6}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libcsplit\libcsplit.vcxproj">
+      <Project>{7faffa48-e3b8-45e7-a2f7-147fe5a47b91}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libcthreads\libcthreads.vcxproj">
+      <Project>{08bbd831-e9ba-4344-99fc-271fc5380350}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libfcache\libfcache.vcxproj">
+      <Project>{734a84dd-432f-4953-b69e-6c2f50651678}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libfdata\libfdata.vcxproj">
+      <Project>{7c8ad25c-4898-4368-a9e4-eb935b094a37}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libfguid\libfguid.vcxproj">
+      <Project>{b8a0f522-ab25-4d77-823b-cf6541b98131}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libfplist\libfplist.vcxproj">
+      <Project>{302ce5ce-de87-4abe-b2c7-e543e4e70108}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libfvalue\libfvalue.vcxproj">
+      <Project>{b7f99737-35eb-4103-bd68-f38f42a390ba}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libhmac\libhmac.vcxproj">
+      <Project>{4f90f629-a4da-4987-8a96-9e5cddece80d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libuna\libuna.vcxproj">
+      <Project>{543020db-ce4a-4ad2-ae6b-a78adef2938b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\zlib\zlib.vcxproj">
+      <Project>{c9e06175-f2cd-4c45-bb92-504310373a96}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
