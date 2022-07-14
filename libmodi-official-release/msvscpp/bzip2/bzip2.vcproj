@@ -58,10 +58,11 @@
 				Name="VCLinkerTool"
 				OutputFile="$(OutDir)\$(ProjectName).dll"
 				AdditionalLibraryDirectories="&quot;$(OutDir)&quot;"
+				ModuleDefinitionFile="..\..\..\bzip2\libbz2.def"
 				RandomizedBaseAddress="2"
 				DataExecutionPrevention="2"
-				TargetMachine="1"
 				ImportLibrary="$(OutDir)\$(ProjectName).lib"
+				TargetMachine="1"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -132,11 +133,12 @@
 				Name="VCLinkerTool"
 				OutputFile="$(OutDir)\$(ProjectName).dll"
 				AdditionalLibraryDirectories="&quot;$(OutDir)&quot;"
+				ModuleDefinitionFile="..\..\..\bzip2\libbz2.def"
 				GenerateDebugInformation="true"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="1"
-				TargetMachine="1"
 				ImportLibrary="$(OutDir)\$(ProjectName).lib"
+				TargetMachine="1"
 			/>
 			<Tool
 				Name="VCALinkTool"
